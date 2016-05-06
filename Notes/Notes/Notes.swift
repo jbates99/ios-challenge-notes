@@ -8,7 +8,7 @@
 
 import Foundation
 
-class note: Equatable {
+class Note: Equatable {
     
     private let textKey = "textKey"
     
@@ -32,6 +32,6 @@ class note: Equatable {
     
 }
 
-func ==(lhs: note, rhs: note) -> Bool {
+func ==(lhs: Note, rhs: Note) -> Bool {
     return lhs.text == rhs.text
 }
