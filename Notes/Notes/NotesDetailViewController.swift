@@ -40,6 +40,7 @@ class NotesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         noteTextView.text = note.text
+        noteTextView.isFirstResponder()
     }
     
     private func saveEntry(add: Bool) {

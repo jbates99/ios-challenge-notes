@@ -9,7 +9,7 @@
 import UIKit
 
 class NotesTableViewController: UITableViewController {
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +34,15 @@ class NotesTableViewController: UITableViewController {
         cell.textLabel?.text = noteForRow.text
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let note = NotesController.sharedController.notes[indexPath.row]
+            NotesController.sharedController.removeNote(note)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            NotesController.sharedController.saveToPersistentStorage()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
