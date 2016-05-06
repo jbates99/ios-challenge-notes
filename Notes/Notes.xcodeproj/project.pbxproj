@@ -13,6 +13,8 @@
 		1AFCF6C81CDC050E006D2F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFCF6C61CDC050E006D2F3D /* LaunchScreen.storyboard */; };
 		C41EF6701CDC18D7000AB95A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41EF66F1CDC18D7000AB95A /* Notes.swift */; };
 		C41EF6721CDC19FB000AB95A /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41EF6711CDC19FB000AB95A /* NotesController.swift */; };
+		C41EF6741CDC1BEE000AB95A /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41EF6731CDC1BEE000AB95A /* NotesTableViewController.swift */; };
+		C41EF6761CDC1C06000AB95A /* NotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41EF6751CDC1C06000AB95A /* NotesDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1AFCF6C91CDC050E006D2F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C41EF66F1CDC18D7000AB95A /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		C41EF6711CDC19FB000AB95A /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
+		C41EF6731CDC1BEE000AB95A /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		C41EF6751CDC1C06000AB95A /* NotesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		1AFCF6BC1CDC050E006D2F3D /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				C41EF6781CDC1C22000AB95A /* ViewControllers */,
 				1AFCF6BD1CDC050E006D2F3D /* AppDelegate.swift */,
 				1AFCF6C11CDC050E006D2F3D /* Main.storyboard */,
 				1AFCF6C41CDC050E006D2F3D /* Assets.xcassets */,
 				1AFCF6C61CDC050E006D2F3D /* LaunchScreen.storyboard */,
 				1AFCF6C91CDC050E006D2F3D /* Info.plist */,
+				C41EF6771CDC1C16000AB95A /* Notes */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		C41EF6771CDC1C16000AB95A /* Notes */ = {
+			isa = PBXGroup;
+			children = (
 				C41EF66F1CDC18D7000AB95A /* Notes.swift */,
 				C41EF6711CDC19FB000AB95A /* NotesController.swift */,
 			);
-			path = Notes;
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		C41EF6781CDC1C22000AB95A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C41EF6731CDC1BEE000AB95A /* NotesTableViewController.swift */,
+				C41EF6751CDC1C06000AB95A /* NotesDetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AFCF6BE1CDC050E006D2F3D /* AppDelegate.swift in Sources */,
+				C41EF6741CDC1BEE000AB95A /* NotesTableViewController.swift in Sources */,
+				C41EF6761CDC1C06000AB95A /* NotesDetailViewController.swift in Sources */,
 				C41EF6721CDC19FB000AB95A /* NotesController.swift in Sources */,
 				C41EF6701CDC18D7000AB95A /* Notes.swift in Sources */,
 			);

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Notes Table View Controller-->
         <scene sceneID="zOW-XO-M1T">
             <objects>
-                <tableViewController id="fPc-c0-pcK" sceneMemberID="viewController">
+                <tableViewController id="fPc-c0-pcK" customClass="NotesTableViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="crN-Qf-7yH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1624" y="128"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes Detail View Controller-->
         <scene sceneID="oZM-WF-Yc6">
             <objects>
-                <viewController id="cg2-nU-cCF" sceneMemberID="viewController">
+                <viewController id="cg2-nU-cCF" customClass="NotesDetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3fu-qv-iFh"/>
                         <viewControllerLayoutGuide type="bottom" id="ipm-3Y-Y6I"/>
@@ -59,8 +59,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-Eo-qyx">
                                 <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-7t-U0k">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="od8-EZ-7wN">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="476"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-7t-U0k">
+                                        <rect key="frame" x="0.0" y="476" width="560" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -78,9 +84,16 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="B4A-Hw-G8u">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ThD-QX-e6D"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ThD-QX-e6D">
+                            <connections>
+                                <action selector="saveNote:" destination="cg2-nU-cCF" id="XOg-aO-4Qk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="od8-EZ-7wN" id="hVe-76-fos"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grA-1w-KNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
