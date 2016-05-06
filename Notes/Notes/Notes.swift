@@ -20,6 +20,8 @@ class Note: Equatable {
     
     init?(dictionary: [String: AnyObject]) {
         guard let text = dictionary[textKey] as? String else { return nil }
+        
+        self.text = text
     }
     
     convenience init() {
